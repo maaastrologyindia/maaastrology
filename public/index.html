@@ -53,7 +53,18 @@ div[style*="background: rgb"] p, section[style*="background: rgb"] p, .bg-black 
   justify-content: center;
 }
 </style>
-<style>/* Dark Banner Universal Fix */ div[style*="background"] *, section[style*="background"] *, div[class*="bg-"] *, section[class*="bg-"] * { color: #ffffff !important; }</style></head>
+<style>/* Dark Banner Universal Fix */ div[style*="background"] *, section[style*="background"] *, div[class*="bg-"] *, section[class*="bg-"] * { color: #ffffff !important; }</style>
+<style>
+/* Force absolute white for all text inside dark promotional banner */
+div[style*="background:"], section[style*="background:"], div.bg-black, section.bg-black {
+    color: #ffffff !important;
+}
+div[style*="background:"] *, section[style*="background:"] * {
+    color: #ffffff !important;
+}
+</style>
+</head>
+
 
 
 <body>
