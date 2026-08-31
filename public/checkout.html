@@ -38,7 +38,27 @@ section#approach article {
     box-sizing: border-box !important;
 }
 </style>
+
+<style>
+/* Fix footer overlap and ensure proper bottom spacing */
+body {
+    position: relative !important;
+    min-height: 100vh !important;
+    padding-bottom: 0 !important;
+}
+main#top, .main-container {
+    padding-bottom: 80px !important;
+}
+footer {
+    position: relative !important;
+    width: 100% !important;
+    clear: both !important;
+    margin-top: 60px !important;
+    z-index: 10 !important;
+}
+</style>
 </head>
+
 
 <body><main class="wrap"><div class="top"><div class="brand"><img src="/assets/maa-astrology-mark.png" alt="Maa Astrology logo"><span>MAA ASTROLOGY</span></div><a class="back" href="/">← Back to website</a></div><div id="main" class="grid"><section class="card"><h1>Complete Your Order</h1><p class="sub">Secure checkout · ₹399 COD / ₹349 prepaid · bundle savings up to 4 bracelets</p><div class="items" id="items"></div><div class="summary" id="summary"></div></section><section class="card"><h2 style="font-weight:500;margin-top:0">Delivery Details</h2><div class="form"><div class="field"><label>Full Name</label><input id="name" autocomplete="name"></div><div class="field"><label>Mobile</label><input id="mobile" inputmode="numeric" autocomplete="tel"></div><div class="field full"><label>Email</label><input id="email" type="email" autocomplete="email"></div><div class="field full"><label>Complete Address</label><input id="address" autocomplete="street-address"></div><div class="field"><label>City</label><input id="city" autocomplete="address-level2"></div><div class="field"><label>State</label><input id="state" autocomplete="address-level1"></div><div class="field full"><label>Pincode</label><input id="pincode" inputmode="numeric" autocomplete="postal-code"></div></div><h3 style="font-weight:500;margin-bottom:6px">Payment</h3><div class="method"><button class="active" data-method="online">Prepaid · Save ₹39</button><button data-method="cod">Cash on Delivery</button></div><div id="status" class="status"></div><button class="cta" id="place">PAY & PLACE ORDER</button><p class="note">Online payments are processed securely by Razorpay. Card/UPI details are not stored by Maa Astrology.</p></section></div><section id="success" class="card success" style="display:none"><div style="font-size:42px;color:var(--gold2)">✦</div><h2>Order Confirmed</h2><p id="successText"></p><a href="/">Back to Maa Astrology</a></section></main><script>
 let products=[],cart=JSON.parse(localStorage.getItem('maa_cart')||'[]'),coupon=localStorage.getItem('maa_coupon')||'',method='online';

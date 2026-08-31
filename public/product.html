@@ -62,7 +62,27 @@ section#approach article {
     box-sizing: border-box !important;
 }
 </style>
+
+<style>
+/* Fix footer overlap and ensure proper bottom spacing */
+body {
+    position: relative !important;
+    min-height: 100vh !important;
+    padding-bottom: 0 !important;
+}
+main#top, .main-container {
+    padding-bottom: 80px !important;
+}
+footer {
+    position: relative !important;
+    width: 100% !important;
+    clear: both !important;
+    margin-top: 60px !important;
+    z-index: 10 !important;
+}
+</style>
 </head>
+
 
 
 <body>
