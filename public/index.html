@@ -26,7 +26,21 @@ footer{border-top:1px solid var(--line);padding:35px 0 50px;background:#5a1720;c
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 .productlink{display:block;height:100%;text-decoration:none}.card h3 a{text-decoration:none}.card h3 a:hover{color:var(--gold3)}.smallbtn{text-decoration:none;display:inline-grid;place-items:center}
 @media(max-width:600px){.cardactions .smallbtn{min-height:42px}}
-</style></head>
+</style>
+<style>
+/* Auto-injected fix for dark banner text visibility and button alignment */
+section[class*="bg-"], div[class*="bg-black"], div[class*="bg-dark"], .bg-dark, [class*="bg-gray-900"] {
+  color: #ffffff !important;
+}
+section[class*="bg-"] p, div[class*="bg-black"] p, div[class*="bg-dark"] p, .bg-dark p {
+  color: #f3f0ea !important;
+}
+a[href*="checkout"], button, .btn {
+  display: inline-block;
+}
+</style>
+</head>
+
 <body>
 <canvas id="starCanvas" aria-hidden="true"></canvas>
 <div class="topbar">✨ <b>₹50 INSTANT PREPAID DISCOUNT</b> on every order · Buy 2+ & use <b>WELCOME10</b> for 10% OFF</div>

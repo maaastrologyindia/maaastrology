@@ -27,7 +27,21 @@ footer{margin-top:70px;background:var(--maroon);color:#f8efe3;padding:28px 0;fon
 @media(max-width:380px){.buyrow{grid-template-columns:1fr}.buyrow .btn:last-child{grid-column:auto}.related-grid{grid-template-columns:1fr 1fr}h1{font-size:34px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 </style>
+
+<style>
+/* Auto-injected fix for dark banner text visibility and button alignment */
+section[class*="bg-"], div[class*="bg-black"], div[class*="bg-dark"], .bg-dark, [class*="bg-gray-900"] {
+  color: #ffffff !important;
+}
+section[class*="bg-"] p, div[class*="bg-black"] p, div[class*="bg-dark"] p, .bg-dark p {
+  color: #f3f0ea !important;
+}
+a[href*="checkout"], button, .btn {
+  display: inline-block;
+}
+</style>
 </head>
+
 <body>
 <div class="topbar">✨ <b>₹50 INSTANT PREPAID DISCOUNT</b> on every order · Buy 2+ & use <b>WELCOME10</b> for 10% OFF</div>
 <header><nav class="wrap">
