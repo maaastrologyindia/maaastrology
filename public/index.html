@@ -63,7 +63,20 @@ div[style*="background:"] *, section[style*="background:"] * {
     color: #ffffff !important;
 }
 </style>
+
+<style>
+/* Ensure high contrast for light sections */
+section:not([style*="background:"]), div:not([style*="background:"]) h1, 
+section:not([style*="background:"]), div:not([style*="background:"]) h2, 
+section:not([style*="background:"]), div:not([style*="background:"]) h3 {
+    color: #1a1a1a !important;
+}
+p.text-muted, .text-gray-600, .text-gray-500, div > p {
+    color: #4a4a4a !important;
+}
+</style>
 </head>
+
 
 
 
