@@ -4,23 +4,14 @@ for path in glob.glob("public/**/*.html", recursive=True):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
     
-    if "Every bracelet is presented" in content:
-        # Target the entire dark banner block and ensure all text inside it is white
-        # Let us inject a powerful style right above </head> that targets the specific container
-        universal_fix = """
-<style>
-/* Force absolute white for all text inside dark promotional banner */
-div[style*="background:"], section[style*="background:"], div.bg-black, section.bg-black {
-    color: #ffffff !important;
-}
-div[style*="background:"] *, section[style*="background:"] * {
-    color: #ffffff !important;
-}
-</style>
-</head>
-"""
-        if "Force absolute white" not in content:
-            content = content.replace("</head>", universal_fix)
-            with open(path, "w", encoding="utf-8") as f:
-                f.write(content)
-            print("Successfully injected absolute white text fix into:", path)
+    if "Energized" in content:
+        # Directly target and force white color on headings containing Energized
+        content = content.replace("<h2>✨", '<h2 style="color: #ffffff !important;"><span style="color: #ffd700 !important;">✨</span>')
+        content = content.replace("<h3>✨", '<h3 style="color: #ffffff !important;"><span style="color: #ffd700 !important;">✨</span>')
+        # Fallback for any h2/h3 near the dark banner
+        content = content.replace("<h2>", '<h2 style="color: #ffffff !important;">')
+        content = content.replace("<h3>", '<h3 style="color: #ffffff !important;">')
+        
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+        print("Forced inline white color on headings in:", path)
