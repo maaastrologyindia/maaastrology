@@ -207,7 +207,7 @@ section#approach article, section#approach .review-card {
 </style>
 
 <style>
-/* Perfect width match for white info box to upper black banner */
+/* Cleaned to upper black banner */
 section#approach {
     max-width: 800px !important;
     width: 100% !important;
@@ -228,7 +228,31 @@ section#approach .review-card {
     box-sizing: border-box !important;
 }
 </style>
+
+<style>
+/* Absolute exact width match to black banner */
+section#approach {
+    max-width: 800px !important;
+    width: 100% !important;
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+section#approach > div, 
+section#approach .reviews, 
+section#approach article, 
+section#approach .review-card,
+section#approach div[style*="background"] {
+    max-width: 800px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+</style>
 </head>
+
 
 
 
