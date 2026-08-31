@@ -39,7 +39,22 @@ a[href*="checkout"], button, .btn {
   display: inline-block;
 }
 </style>
+
+<style>
+/* Force high contrast text inside dark banner boxes */
+div[style*="background: rgb"], section[style*="background: rgb"], .bg-black, div[class*="bg-"], section[class*="bg-"] {
+  color: #ffffff !important;
+}
+div[style*="background: rgb"] p, section[style*="background: rgb"] p, .bg-black p, div[class*="bg-"] p {
+  color: #f3f0ea !important;
+}
+/* Center align choose your bracelet wrapper */
+.flex, div[style*="display: flex"] {
+  justify-content: center;
+}
+</style>
 </head>
+
 
 <body>
 <canvas id="starCanvas" aria-hidden="true"></canvas>
