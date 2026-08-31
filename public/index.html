@@ -288,7 +288,7 @@ section#approach article {
 </style>
 
 <style>
-/* Fix footer overlap and ensure proper bottom spacing */
+/* Cleaned */
 body {
     position: relative !important;
     min-height: 100vh !important;
@@ -307,7 +307,7 @@ footer {
 </style>
 
 <style>
-/* Permanent fix for footer overlap */
+/* Cleaned */
 html, body {
     height: 100%;
     margin: 0;
@@ -325,7 +325,31 @@ footer {
     z-index: 100 !important;
 }
 </style>
+
+<style>
+/* Precise fix for white info section width and footer spacing */
+section#approach {
+    max-width: 800px !important;
+    width: 90% !important;
+    margin: 40px auto 100px auto !important;
+    padding-bottom: 60px !important;
+    box-sizing: border-box !important;
+}
+
+section#approach .reviews, section#approach .features-grid, section#approach > div {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+footer {
+    position: relative !important;
+    margin-top: 120px !important;
+    z-index: 50 !important;
+}
+</style>
 </head>
+
 
 
 
