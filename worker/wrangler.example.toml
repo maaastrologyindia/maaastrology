@@ -1,0 +1,12 @@
+name = "maa-astrology-api"
+main = "src/index.js"
+compatibility_date = "2026-08-26"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "maa-astrology"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "maa-astrology-assets"
