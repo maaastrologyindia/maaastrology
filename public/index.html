@@ -81,7 +81,21 @@ div:has(> div[style*="background:"]) {
     width: 100% !important;
 }
 </style>
+
+<style>
+/* Foolproof Transform Centering Trick */
+div[style*="background:"]:not(:root), section[style*="background:"] {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 92% !important;
+    max-width: 1200px !important;
+}
+</style>
 </head>
+
 
 
 
