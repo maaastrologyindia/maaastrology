@@ -94,7 +94,20 @@ div[style*="background:"]:not(:root), section[style*="background:"] {
     max-width: 1200px !important;
 }
 </style>
+
+<style>
+/* Force absolute center alignment on the Energized banner section */
+section#why, section:has(h2), div:has(> h2:contains("Energized")) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    float: none !important;
+}
+</style>
 </head>
+
 
 
 
