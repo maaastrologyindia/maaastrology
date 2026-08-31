@@ -97,7 +97,7 @@ footer {
 </style>
 
 <style>
-/* Exact match for white info section to upper black banner dimensions */
+/* Cleaned */
 section#approach {
     max-width: 800px !important;
     width: 100% !important;
@@ -122,7 +122,35 @@ footer {
     z-index: 10 !important;
 }
 </style>
+
+<style>
+/* Force section#approach to match the exact max-width and styling of the upper banner */
+section#approach {
+    max-width: 800px !important;
+    width: 800px !important;
+    max-width: min(800px, 92vw) !important;
+    margin: 40px auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+}
+
+section#approach .reviews, section#approach .features-grid, section#approach div {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+section#approach article, section#approach .review {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 20px auto !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+}
+</style>
 </head>
+
 
 
 
