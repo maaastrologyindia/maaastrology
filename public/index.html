@@ -106,7 +106,24 @@ section#why, section:has(h2), div:has(> h2:contains("Energized")) {
     float: none !important;
 }
 </style>
+
+<style>
+/* Force main container and its children to center */
+main#top, #top {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+main#top > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1200px !important;
+    width: 90% !important;
+}
+</style>
 </head>
+
 
 
 
