@@ -107,7 +107,7 @@ function showToast(msg){$('toastName').textContent=msg;$('toast').classList.add(
 $('toastClose').onclick=()=>$('toast').classList.remove('show');$('cartBtn').onclick=openCart;$('cartClose').onclick=closeCart;$('shade').onclick=closeCart;
 $('menuBtn').onclick=()=>{const open=$('navlinks').classList.toggle('mobile');$('menuBtn').setAttribute('aria-expanded',String(open))};document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>$('navlinks').classList.remove('mobile')));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();$('navlinks').classList.remove('mobile')}})
-async function init(){try{const r=await fetch('/api/products');if(!r.ok)throw new Error('Unable to load products');products=await r.json();loadProduct();renderCart()}catch(e){console.error(e);$('pdp').innerHTML='<div class="error-page"><h1>Collection unavailable</h1><p>Please refresh and try again.</p><a class="btn gold" href="/" style="display:inline-flex;align-items:center;text-decoration:none;margin-top:15px">Back to Shop</a></div>'}}
+async function init(){try{const r=await fetch('./data/products.json');if(!r.ok)throw new Error('Unable to load products');products=await r.json();loadProduct();renderCart()}catch(e){console.error(e);$('pdp').innerHTML='<div class="error-page"><h1>Collection unavailable</h1><p>Please refresh and try again.</p><a class="btn gold" href="/" style="display:inline-flex;align-items:center;text-decoration:none;margin-top:15px">Back to Shop</a></div>'}}
 init();
 </script>
 </body></html>
