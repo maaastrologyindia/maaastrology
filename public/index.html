@@ -110,7 +110,28 @@ div[style*="background: rgb"], div[style*="background:linear-gradient"], div[sty
     float: none !important;
 }
 </style>
+
+<style>
+/* Direct Centering Fix */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main, div.container, section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div[style*="background"] {
+    margin: 0 auto !important;
+    max-width: 1200px !important;
+    width: 90% !important;
+}
+</style>
 </head>
+
 
 
 
