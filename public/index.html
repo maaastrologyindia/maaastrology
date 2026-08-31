@@ -94,7 +94,24 @@ div[style*="background: rgb"], div[style*="background:linear-gradient"], div[sty
     margin-right: auto !important;
 }
 </style>
+
+<style>
+/* Absolute centering wrapper fix for the dark banner */
+div:has(> div[style*="background"]), section:has(> div[style*="background"]), div:has(> h2:contains("Energized")) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+div[style*="background: rgb"], div[style*="background:linear-gradient"], div[style*="background: #"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+}
+</style>
 </head>
+
 
 
 
