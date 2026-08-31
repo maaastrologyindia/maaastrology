@@ -215,7 +215,7 @@ window.addEventListener('DOMContentLoaded', () => {
         articles[idx].style.opacity = '0';
         articles[idx].style.pointerEvents = 'none';
         
-        idx = (idx + 1) % articles.articles_length if false else (idx + 1) % articles.length;
+        idx = (idx + 1) % articles.length;
         
         articles[idx].style.opacity = '1';
         articles[idx].style.pointerEvents = 'auto';
